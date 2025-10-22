@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docs — NutriontOS</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — NutriontOS</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Nutriont<span class="os">OS</span></div>
     <ul class="nav-links">
@@ -17,29 +19,35 @@
     </ul>
   </nav>
 
-  <main class="docs-content">
-    <h1>Documentation</h1>
-    <p>Welcome to the NutriontOS documentation portal.</p>
-
-    <section>
-      <h2>Getting Started</h2>
-      <p>Boot the ISO, follow the guided installer, or use the manual CLI setup.</p>
-    </section>
-
-    <section>
-      <h2>System Configuration</h2>
-      <p>All configurations are stored in <code>/etc/nutriont/</code>. Modular configs allow deep customization.</p>
-    </section>
-
-    <section>
-      <h2>Package Management</h2>
-      <p>Use <code>ntrn-pkg</code> to install, remove, or build custom packages.</p>
-    </section>
+  <!-- DOCS HERO -->
+  <main class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Documentation</h1>
+      <p class="hero-sub">Learn how to install, configure, and get the most out of NutriontOS.</p>
+    </div>
   </main>
+
+  <!-- DOCS CONTENT -->
+  <section class="docs-content">
+    <h2>Installation</h2>
+    <p>Follow the steps on the Download page to get started.</p>
+
+    <h2>Basic Commands</h2>
+    <pre><code>$ nutriont update
+$ nutriont install <package>
+$ nutriont remove <package></code></pre>
+
+    <h2>Configuration</h2>
+    <p>Edit configuration files located in <code>/etc/nutriont/</code> to customize your system.</p>
+
+    <h2>Advanced Usage</h2>
+    <p>Leverage modular components to optimize your OS for speed and efficiency.</p>
+  </section>
 
   <footer>
     NutriontOS made by <strong>Stanisław Brzuchalski</strong> — 
     <a href="https://nutriontos.online" target="_blank">nutriontos.online</a>
   </footer>
+
 </body>
 </html>
