@@ -1,0 +1,122 @@
+:root {
+  --bg: #111111;
+  --text: #ffffff;
+  --accent: #00ffff;
+  --highlight: #baff29;
+  --font-main: 'Inter', 'Poppins', 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  text-rendering: geometricPrecision;
+}
+
+header {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px var(--accent);
+}
+
+.os-highlight {
+  color: var(--highlight);
+  text-shadow: 0 0 10px var(--highlight);
+}
+
+.slogan {
+  font-size: 1.5rem;
+  color: var(--highlight);
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.sysinfo {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin-top: 5vh;
+  width: 80%;
+  max-width: 700px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.sys-line {
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  text-align: center;
+  max-width: 700px;
+  margin: 8vh 2rem 6vh;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn {
+  border: 2px solid var(--accent);
+  color: var(--text);
+  background: transparent;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 25px var(--accent);
+}
+
+.links {
+  margin-top: 4vh;
+  display: flex;
+  gap: 2rem;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
