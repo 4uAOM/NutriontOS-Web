@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     Kernel: "6.9.3-ntrn",
     Arch: "x86_64",
     Host: "nutriont-node",
-    Uptime: `${Math.floor(Math.random() * 24)}h ${Math.floor(Math.random() * 60)}m`,
-    Memory: `${(Math.random() * 3 + 2).toFixed(1)} GB / 8 GB`,
+    Uptime: `${Math.floor(Math.random()*24)}h ${Math.floor(Math.random()*60)}m`,
+    Memory: `${(Math.random()*3+2).toFixed(1)} GB / 8 GB`,
     Shell: "bash 5.3"
   };
 
@@ -26,6 +26,5 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(type, typeSpeed);
     }
   }
-
   type();
 });
