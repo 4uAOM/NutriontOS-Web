@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Download — NutriontOS</title>
-  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo">Nutriont<span class="os">OS</span></div>
     <ul class="nav-links">
@@ -17,28 +19,37 @@
     </ul>
   </nav>
 
-  <main class="content">
-    <h1>Download NutriontOS</h1>
-    <p>Get the latest ISO release and experience the power of minimalism.</p>
-      <a href="https://github.com/4uAOM/NutriontOS-ISO" class="btn download-btn" target="_blank">Download</a>
-    <div class="checksums">
-      <h3>SHA256 Checksums</h3>
-      <code>nutriontos-1v22b.iso</code>
-    </div>
-
-    <div class="install-guide">
-      <h3>Installation Guide</h3>
-      <ol>
-        <li>Download the ISO.</li>
-        <li>Write it to a USB drive with <code>dd</code> or Rufus.</li>
-        <li>Boot and install — total control, no fluff.</li>
-      </ol>
+  <!-- DOWNLOAD HERO -->
+  <main class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Download NutriontOS</h1>
+      <p class="hero-sub">Get the latest ISO and enjoy minimal power with maximum freedom.</p>
+      <a href="https://github.com/4uAOM/NutriontOS-ISO" class="btn download-btn" target="_blank">Download ISO</a>
     </div>
   </main>
+
+  <!-- CHECKSUMS -->
+  <section class="content checksums">
+    <h2>Checksums</h2>
+    <code>SHA256: e3b0c44298fc1c149afbf4c8996fb924...</code>
+    <code>MD5: d41d8cd98f00b204e9800998ecf8427e</code>
+  </section>
+
+  <!-- INSTALL GUIDE -->
+  <section class="content install-guide">
+    <h2>Quick Install Guide</h2>
+    <ol>
+      <li>Download the ISO.</li>
+      <li>Flash to USB using your preferred tool.</li>
+      <li>Boot from USB and follow the on-screen instructions.</li>
+      <li>Customize and enjoy your modular OS!</li>
+    </ol>
+  </section>
 
   <footer>
     NutriontOS made by <strong>Stanisław Brzuchalski</strong> — 
     <a href="https://nutriontos.online" target="_blank">nutriontos.online</a>
   </footer>
+
 </body>
 </html>
