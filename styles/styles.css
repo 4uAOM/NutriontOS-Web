@@ -1,9 +1,10 @@
 :root {
-  --bg: #f9f8f6;           /* jasny beż */
-  --text: #222222;         /* ciemna szarość */
-  --accent: #444444;       /* ciemniejsza szarość dla przycisków / nagłówków */
-  --highlight: #888888;    /* delikatne podświetlenie */
-  --border: rgba(0,0,0,0.1);
+  /* Paleta inspirowana Noctua: ciemne tło, ciepłe pomarańcze i beże */
+  --bg: #1a1a1a;           /* ciemny grafit */
+  --text: #f5f0e6;         /* jasny beż / krem */
+  --accent: #d66a32;       /* pomarańcz Noctua */
+  --highlight: #ff9f1c;    /* jasny pomarańcz */
+  --border: rgba(214,106,50,0.2); /* delikatne obramowania */
   --font-main: 'Inter', 'Poppins', 'JetBrains Mono', monospace;
 }
 
@@ -31,14 +32,14 @@ a:hover {
   color: var(--highlight);
 }
 
-/* NAVBAR */
+/* ---------------- NAVBAR ---------------- */
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3rem;
-  background: #ffffffcc; /* półprzezroczyste tło */
+  background: rgba(26,26,26,0.95);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -50,10 +51,12 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--accent);
+  text-shadow: 0 0 5px var(--accent);
 }
 
 .logo .os {
   color: var(--highlight);
+  text-shadow: 0 0 8px var(--highlight);
 }
 
 .nav-links {
@@ -62,22 +65,35 @@ a:hover {
   gap: 2rem;
 }
 
+.nav-links li a {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 .nav-links li a.active {
   border-bottom: 2px solid var(--accent);
   padding-bottom: 2px;
 }
 
-/* HERO */
+/* ---------------- HERO ---------------- */
 .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 8vh;
+  height: 60vh;
   padding: 2rem;
+}
+
+.hero-inner {
+  max-width: 800px;
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
   color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
 }
 
 .hero-sub {
@@ -86,7 +102,104 @@ a:hover {
   margin: 1rem 0 2rem 0;
 }
 
-/* BUTTON */
+/* ---------------- SYSINFO ---------------- */
+.sysinfo {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  margin: 5vh auto;
+  width: 85%;
+  max-width: 720px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  box-shadow: 0 0 20px rgba(214,106,50,0.2);
+  text-align: left;
+}
+
+.sys-line {
+  color: var(--highlight);
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+/* ---------------- CONTENT ---------------- */
+.content {
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 0 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--highlight);
+}
+
+.feature h2 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #e0d8c3;
+  font-size: 0.95rem;
+}
+
+/* ---------------- CHECKSUM & GUIDE ---------------- */
+.checksums code {
+  display: block;
+  margin: 1rem 0;
+  background: rgba(214,106,50,0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.install-guide ol {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.install-guide li {
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------- DOCS ---------------- */
+.docs-content {
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 0 2rem;
+}
+
+.docs-content h2 {
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+.docs-content code {
+  background: rgba(214,106,50,0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ---------------- BUTTON ---------------- */
 .btn {
   display: inline-block;
   padding: 1rem 3rem;
@@ -102,39 +215,21 @@ a:hover {
   background: var(--accent);
   color: var(--bg);
   border: 2px solid var(--accent);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(214,106,50,0.2);
 }
 
 .download-btn:hover {
   background: var(--bg);
   color: var(--accent);
   border: 2px solid var(--accent);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(214,106,50,0.4);
 }
 
-/* SYSINFO */
-.sysinfo {
-  background: #ffffff11;
-  border: 1px solid var(--border);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  margin: 5vh auto;
-  width: 80%;
-  max-width: 700px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--accent);
-}
-
-.sys-line {
-  color: var(--highlight);
-  margin-bottom: 0.5rem;
-}
-
-/* FOOTER */
+/* ---------------- FOOTER ---------------- */
 footer {
-  margin-top: 8vh;
-  font-size: 0.8rem;
-  color: #555;
+  margin-top: 10vh;
+  font-size: 0.85rem;
+  color: #c4bca8;
   text-align: center;
   padding-bottom: 3vh;
 }
@@ -147,17 +242,19 @@ footer a:hover {
   color: var(--highlight);
 }
 
-/* RESPONSIVE */
+/* ---------------- RESPONSIVE ---------------- */
 @media (max-width: 768px) {
   .nav-links { gap: 1rem; }
-  .hero-title { font-size: 2.2rem; }
+  .hero { height: 50vh; }
+  .hero-title { font-size: 2.4rem; }
   .hero-sub { font-size: 1.1rem; }
 }
 
 @media (max-width: 480px) {
   .navbar { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .nav-links { flex-direction: column; gap: 0.5rem; }
-  .hero-title { font-size: 1.8rem; }
+  .hero { height: auto; padding: 2rem 1rem; }
+  .hero-title { font-size: 2rem; }
   .hero-sub { font-size: 1rem; }
   .btn { padding: 0.8rem 2.5rem; }
 }
