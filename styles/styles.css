@@ -1,8 +1,9 @@
 :root {
-  --bg: #111111;
+  --bg: #0c0c0c;
   --text: #ffffff;
-  --accent: #00ffff;
-  --highlight: #baff29;
+  --accent: #00ff66;       /* główna ciemna zieleń */
+  --highlight: #a8ff60;    /* jasne podświetlenie */
+  --border: rgba(0, 255, 102, 0.2);
   --font-main: 'Inter', 'Poppins', 'JetBrains Mono', monospace;
 }
 
@@ -16,90 +17,96 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-main);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  line-height: 1.5;
   min-height: 100vh;
-  overflow-x: hidden;
-  line-height: 1.6;
-  text-rendering: geometricPrecision;
 }
 
-header {
-  text-align: center;
-  margin-top: 10vh;
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--highlight);
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border);
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: var(--accent);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 0 0 20px var(--accent);
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
 }
 
-.os-highlight {
+.logo .os {
   color: var(--highlight);
   text-shadow: 0 0 10px var(--highlight);
 }
 
-.slogan {
-  font-size: 1.5rem;
-  color: var(--highlight);
-  margin-top: 0.5rem;
-  letter-spacing: 1px;
-}
-
-.sysinfo {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  margin-top: 5vh;
-  width: 80%;
-  max-width: 700px;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--accent);
-  text-shadow: 0 0 5px var(--accent);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-}
-
-.sys-line {
-  color: var(--highlight);
-  margin-bottom: 0.5rem;
-}
-
-.description {
-  text-align: center;
-  max-width: 700px;
-  margin: 8vh 2rem 6vh;
-  color: #ccc;
-  font-size: 1rem;
-}
-
-.download {
+.nav-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.nav-links li a.active {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  text-align: center;
+  margin-top: 8vh;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 0 15px var(--accent);
+  line-height: 1.2;
+}
+
+.hero-sub {
+  font-size: 1.3rem;
+  color: var(--highlight);
+  margin: 1rem 0 2rem 0;
 }
 
 .btn {
-  border: 2px solid var(--accent);
-  color: var(--text);
-  background: transparent;
+  display: inline-block;
   padding: 1rem 3rem;
-  font-size: 1.1rem;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  cursor: pointer;
-  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  box-shadow: 0 0 10px var(--accent);
   transition: all 0.2s ease;
-  text-decoration: none;
-  box-shadow: 0 0 8px var(--accent);
 }
 
 .btn:hover {
@@ -108,15 +115,149 @@ header {
   box-shadow: 0 0 25px var(--accent);
 }
 
-.links {
-  margin-top: 4vh;
-  display: flex;
-  gap: 2rem;
+/* ---------------- SYSINFO ---------------- */
+.sysinfo {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin: 5vh auto;
+  width: 80%;
+  max-width: 700px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--accent);
+  box-shadow: 0 0 20px rgba(0,255,102,0.1);
 }
 
-.links a {
+.sys-line {
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------- CONTENT ---------------- */
+.content {
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 0 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.feature h2 {
   color: var(--accent);
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* ---------------- CHECKSUM & GUIDE ---------------- */
+.checksums code {
+  display: block;
+  margin: 1rem 0;
+  background: rgba(0,255,102,0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.install-guide ol {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.install-guide li {
+  margin-bottom: 0.8rem;
+}
+
+/* ---------------- DOCS ---------------- */
+.docs-content {
+  max-width: 900px;
+  margin: 6vh auto;
+  padding: 0 2rem;
+}
+
+.docs-content h2 {
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+.docs-content code {
+  background: rgba(0,255,102,0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  margin-top: 8vh;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+footer a:hover {
+  color: var(--highlight);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-sub {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-sub {
+    font-size: 1rem;
+  }
+  .btn {
+    padding: 0.8rem 2.5rem;
+  }
 }
