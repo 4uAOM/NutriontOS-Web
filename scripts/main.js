@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!sysOutput) return;
 
   const info = {
-    OS: "NutriontOS v1.0",
+    OS: "NutriontOS 1.5v22d",
     Kernel: "6.9.3-ntrn",
     Arch: "x86_64",
     Host: "nutriont-node",
