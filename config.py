@@ -2,7 +2,7 @@ import os
 
 # Ustaw tutaj sha256 (hex) Twojej Magic Phrase wygenerowany lokalnie:
 # php -r "echo hash('sha256','f7z1r9bq4xk3t2m');"
-MAGIC_PHRASE_HASH = 'PUT_SHA256_HEX_OF_MAGIC_PHRASE_HERE'
+MAGIC_PHRASE_HASH = 'f7z1r9bq4xk3t2m'
 
 # Katalog do przechowywania zaszyfrowanych treningów
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
