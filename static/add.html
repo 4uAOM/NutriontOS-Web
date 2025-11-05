@@ -1,27 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>Dodaj trening</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script defer src="/static/js/encryption.js"></script>
+  <script defer src="/static/js/app.js"></script>
 </head>
 <body>
   <div class="container">
     <h2>Nowy trening</h2>
-
-    <label>Data treningu:</label>
-    <input type="date" id="training-date">
-
-    <label>Opis treningu:</label>
-    <input type="text" id="desc" placeholder="np. 5x300m tempo 90%">
-
+    <label>Data treningu</label>
+    <input id="training-date" type="date">
+    <label>Opis</label>
+    <input id="desc" type="text" placeholder="np. 6x300m">
     <div id="intervals"></div>
-
-    <button id="add-interval" class="btn">Dodaj odcinek</button>
-    <button id="finish-training" class="btn primary">Zakończ i zapisz</button>
-
-    <a href="index.html" class="btn small">← Wróć</a>
+    <div style="margin-top:12px;">
+      <button id="add-interval" class="btn">Dodaj odcinek</button>
+      <button id="finish-training" class="btn primary">Zapisz (szyfruj i wyślij)</button>
+      <a class="btn small" href="/index.html">Powrót</a>
+    </div>
   </div>
 </body>
 </html>
