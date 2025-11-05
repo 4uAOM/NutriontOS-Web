@@ -1,85 +1,20 @@
-body {
-  font-family: 'Inter', sans-serif;
-  background: #f8f9fa;
-  color: #222;
-  margin: 0;
-  padding: 0;
+:root{
+  --bg:#0f1724;
+  --muted:#9aa6b2;
+  --accent:#5eead4;
+  --accent-2:#60a5fa;
 }
 
-.container {
-  max-width: 700px;
-  margin: 60px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-}
-
-.center {
-  text-align: center;
-}
-
-h1, h2 {
-  margin-bottom: 20px;
-}
-
-#datetime {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px 18px;
-  border-radius: 8px;
-  border: none;
-  text-decoration: none;
-  background: #e0e0e0;
-  color: #222;
-  transition: background 0.2s;
-}
-
-.btn:hover {
-  background: #d0d0d0;
-}
-
-.btn.primary {
-  background: #007bff;
-  color: white;
-}
-
-.btn.primary:hover {
-  background: #0062d6;
-}
-
-.btn.small {
-  font-size: 0.9rem;
-  padding: 8px 14px;
-}
-
-label {
-  display: block;
-  margin-top: 10px;
-}
-
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.interval {
-  background: #f3f3f3;
-  padding: 12px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.interval input {
-  width: calc(25% - 10px);
-  margin-right: 10px;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Roboto;background:#f6f7fb;color:#111}
+.container{max-width:900px;margin:40px auto;background:#fff;padding:24px;border-radius:10px;box-shadow:0 6px 30px rgba(10,14,26,0.06)}
+.center{text-align:center}
+h1,h2{margin:0 0 16px 0}
+input{display:block;width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid #d7dbe0}
+.btn{display:inline-block;padding:8px 12px;border-radius:8px;border:0;background:#e6eef6;color:#053046;text-decoration:none;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04263b;font-weight:700}
+.btn.small{padding:6px 10px;font-size:14px}
+.interval{display:flex;gap:8px;align-items:center;margin-top:10px}
+.interval input{width:100%}
+.card{background:#fbfdff;padding:12px;border-radius:8px;margin-top:10px;border:1px solid #eef3f8}
+.card-actions{margin-top:8px;display:flex;gap:8px}
